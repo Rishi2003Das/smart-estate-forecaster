@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Real estate themed colors
+				estate: {
+					blue: {
+						DEFAULT: '#0A3D62',
+						light: '#3282B8'
+					},
+					green: {
+						DEFAULT: '#16A085'
+					},
+					gray: {
+						DEFAULT: '#F7F9FC',
+						dark: '#4A5568'
+					}
 				}
 			},
 			borderRadius: {
@@ -84,12 +99,24 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { 
+						opacity: '0' 
+					},
+					'100%': { 
+						opacity: '1' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards'
+			},
+			backgroundImage: {
+				'hero-pattern': "url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3')"
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
